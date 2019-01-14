@@ -12,6 +12,10 @@ if(name){
     }
 
     let number = parseInt(localStorage.getItem('number'));
+    if(!number){
+        localStorage.setItem('number', '0')
+        number = 0;
+    }
     document.getElementById('number').innerHTML = number;
 
     function increaseNumber(){
